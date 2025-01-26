@@ -1,0 +1,17 @@
+{
+    "jobCard": {
+        "jobId": "1",
+"date": "Tue, 10th Dec",
+"time": "12:00 AM",
+"location": "Calgary, AB - 8.2km",
+"employee": "",
+"position": "General Labor",
+"hourlyRate": 17.50,
+"hours": 8,
+"totalAmount": 140.00,
+"backgroundImage": "https://cdn.builder.io/api/v1/image/assets/TEMP/5d39e68ac8e6f65c8f0802b579ba00d28ef135baad94913e4bf910ed7bc5a4b4?placeholderIfAbsent=true&apiKey=40e5f984174e460295df60a5034c4fb5",
+"employer":"Jacobs Construction"
+}
+
+}
+

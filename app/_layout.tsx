@@ -7,6 +7,16 @@ import { useEffect } from 'react';
 import 'react-native-reanimated';
 
 import { useColorScheme } from '@/components/useColorScheme';
+import { ReactDOM } from 'react';
+
+
+// @@iconify-code-gen
+
+// ReactDOM.createRoot(document.getElementById('root')!).render(
+//   <React.StrictMode>
+//     <App />
+//   </React.StrictMode>
+// );
 
 export {
   // Catch any errors thrown by the Layout component.
