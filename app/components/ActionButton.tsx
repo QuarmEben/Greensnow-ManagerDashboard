@@ -17,7 +17,7 @@ export const ActionButton: React.FC<ButtonProps> = ({ label, isEnabled, onPress,
     <View style = {tw`flex flex-col self-start items-center w-[300px]`}>
     <TouchableOpacity 
       onPress={onPress}
-      style={tw`self-center px-16 py-4 mt-1 w-full rounded-xl max-w-[327px] ${buttonStyle} ${className}`}
+      style={tw`self-center px-16 py-4 mt-1 w-full rounded-xl max-w-[327px] ${buttonStyle} ${className} ${textColor}`}
       accessibilityRole="button"
     >
       <Text style={tw`text-xl font-semibold tracking-tight text-center text-white ${textColor}`}>

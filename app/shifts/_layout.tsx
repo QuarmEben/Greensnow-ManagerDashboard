@@ -16,12 +16,6 @@ export default function ShiftsLayout() {
             <Stack.Screen name='ShiftDetailsPosted' options={{ headerShown: false }} />
             <Stack.Screen name='ShiftDetailsTakenWithReview' options={{ headerShown: false }} />
             <Stack.Screen name='ShiftDetailsTakenWithActionButtons' options={{ headerShown: false }} />
-            <Stack.Screen name='ShiftDetailsPreview' options={{ headerShown: false }} />
-            <Stack.Screen name='ShiftPickerProfile' options={{ headerShown: false }} />
-            <Stack.Screen name='ShiftsCompleted' options={{ headerShown: false }} />
-            <Stack.Screen name='ShiftsWithPosts' options={{ headerShown: false }} />
-            <Stack.Screen name='UpComingShiftDetails' options={{ headerShown: false }} />
-            <Stack.Screen name='UpComingShiftDetailsBegan' options={{ headerShown: false }} />
         </Stack>
     </View>
   );

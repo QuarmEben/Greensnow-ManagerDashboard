@@ -1,5 +1,5 @@
-import React from 'react';
-import { View, Text, TouchableOpacity, ScrollView, Image } from 'react-native';
+import React, { useState } from 'react';
+import { View, Text, TouchableOpacity, ScrollView, Image, Modal, TextInput } from 'react-native';
 import tw from 'twrnc';
 import { FontAwesome } from '@expo/vector-icons';
 import { images } from '@/assets/images';
@@ -7,6 +7,11 @@ import { ActionButton } from '../components/ActionButton';
 import { router } from 'expo-router';
 
 const UserApproved = () => {
+
+  const [isSuspendAccount, setIsSuspendAccount] = useState(false);
+  const [isRemoveAccount, setIsRemoveAccount] = useState(false);
+  const [password, setPassword] = useState('');
+
   return (
     
       <View style={tw`px-4 py-6 bg-gray-100`}>
@@ -147,22 +152,140 @@ const UserApproved = () => {
         {/* Buttons */}
         <View style={tw`flex justify-around`}>
          <ActionButton 
-         onPress={() => {}}
+         onPress={() => setIsSuspendAccount(true)}
          className=' w-[97%]'
          isEnabled = {false}
          label='Suspend Account'
          />
          <ActionButton 
-         onPress={() => {}}
+         onPress={() => setIsRemoveAccount(true)}
          className='bg-red-500 mt-2 mb-8 w-[97%]'
          isEnabled = {true}
          label='Remove Account'
          />
         </View>
         </ScrollView>
+
+    {/* Suspend Account Modal -----------------------------------------------*/}
+    
+      {/* Modal Container */}
+      <Modal 
+        visible={isSuspendAccount} 
+        onRequestClose={() => setIsSuspendAccount(false)}
+        animationType='fade'
+        presentationStyle='pageSheet'
+        transparent={true}
+      >
+      <View style={tw`bg-white w-11/12 p-6 rounded-xl shadow-lg items-center self-center mt-auto mb-auto`}>
+        {/* Close Button */}
+        <TouchableOpacity 
+      onPress={() => setIsSuspendAccount(false) }
+      style={tw`self-end w-3.5 aspect-[1.08]`}
+      >
+            <Image
+              source={images.closeicon}
+              style={tw`object-contain self-end w-3.5 aspect-[1.08]`}
+              accessibilityLabel="Close modal"
+            />
+            </TouchableOpacity>
+
+        {/* Title */}
+        <Text style={tw`self-start text-2xl font-bold text-stone-900 mt-6`}>
+          Are You Sure You Want To Suspend Account?
+        </Text>
+
+        {/* Description */}
+        <Text style={tw`text-gray-600 text-center mt-5 mb-6`}>
+          Account won’t be able to pick up or{'\n'}create shifts till you unsuspend.{'\n'}Enter your password to confirm suspension.
+        </Text>
+
+        <View style={tw`text-gray-600 self-start mt-3 mb-1`}>
+        <Text style={tw`text-gray-600`}>Password</Text>
+        </View>
+        {/* Password Input */}
+        <TextInput
+          style={tw`border border-gray-300 rounded-lg p-3 mb-6 w-full`}
+          secureTextEntry
+          placeholder="Password"
+          value={password}
+          onChangeText={setPassword}
+        />
+
+        {/* Suspend Button */}
+        <View style={tw``}>
+            <ActionButton 
+            className='text-gray-300 w-[193px] p-3'
+            isEnabled={false}
+            label='Suspend'
+            onPress={() => setIsSuspendAccount(true)}
+        />
+        </View>
       </View>
+      </Modal>
+
+
+      {/* Remove Account Modal -----------------------------------------------*/}
+    
+      {/* Modal Container */}
+      <Modal 
+        visible={isRemoveAccount} 
+        onRequestClose={() => setIsRemoveAccount(false)}
+        animationType='fade'
+        presentationStyle='pageSheet'
+        transparent={true}
+      >
+      <View style={tw`bg-white w-11/12 p-6 rounded-xl shadow-lg items-center self-center mt-auto mb-auto`}>
+        {/* Close Button */}
+        <TouchableOpacity 
+      onPress={() => setIsRemoveAccount(false) }
+      style={tw`self-end w-3.5 aspect-[1.08]`}
+      >
+            <Image
+              source={images.closeicon}
+              style={tw`object-contain self-end w-3.5 aspect-[1.08]`}
+              accessibilityLabel="Close modal"
+            />
+            </TouchableOpacity>
+
+        {/* Title */}
+        <Text style={tw`text-center text-2xl font-bold text-stone-900 mt-6`}>
+          Are You Sure You Want To Delete Account?
+        </Text>
+
+        {/* Description */}
+        <Text style={tw`text-gray-600 text-center mt-5`}>
+            Account data would be removed from database.{'\n'}Enter your password to confirm deletion.
+        </Text>
+
+        <View style={tw`text-gray-600 self-start mt-3 mb-1`}>
+        <Text style={tw`text-gray-600 mt-5`}>Password</Text>
+        </View>
+        {/* Password Input */}
+        <TextInput
+          style={tw`border border-gray-300 rounded-lg p-3 mb-6 w-full`}
+          secureTextEntry
+          placeholder="Password"
+          value={password}
+          onChangeText={setPassword}
+        />
+
+        {/* Remove Button */}
+        <View style={tw``}>
+            <ActionButton 
+            className='text-gray-300 w-[193px] p-3 bg-red-500'
+            isEnabled={true}
+            label='Delete'
+            onPress={() => setIsRemoveAccount(false)}
+        />
+        </View>
+      </View>
+      </Modal>
+    </View>
+
+    
     
   );
 };
+
 
 export default UserApproved;

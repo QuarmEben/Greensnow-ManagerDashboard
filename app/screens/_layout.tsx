@@ -18,10 +18,6 @@ export default function ShiftsLayout() {
             <Stack.Screen name='UserImage' options={{ headerShown: false }} />
             <Stack.Screen name='IdentityVerification' options={{ headerShown: false }} />
             <Stack.Screen name='UserImageApproved' options={{ headerShown: false }} />
-            <Stack.Screen name='ShiftsCompleted' options={{ headerShown: false }} />
-            <Stack.Screen name='ShiftsWithPosts' options={{ headerShown: false }} />
-            <Stack.Screen name='UpComingShiftDetails' options={{ headerShown: false }} />
-            <Stack.Screen name='UpComingShiftDetailsBegan' options={{ headerShown: false }} />
         </Stack>
     </View>
   );
