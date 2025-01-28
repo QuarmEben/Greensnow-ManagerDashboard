@@ -53,7 +53,7 @@ const LanguageSwitcher: React.FC<LanguageSwitcherProps> = ({
         {  isOpen ?
         <View style={tw`absolute top-7 px-2 bg-white`}>
             {languages.map((language, index) => ( 
-              <TouchableOpacity onPress={()=>{
+              <TouchableOpacity key={index} onPress={()=>{
                 defaultLanguage = language.language;
                 defaultIcon = language.flag;
                 setIsOpen(false);
