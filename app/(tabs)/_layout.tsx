@@ -23,7 +23,7 @@ export default function TabLayout() {
   const colorScheme = useColorScheme();
 
   return (
-    <View style={tw`flex-1 overflow-hidden flex-col px-2 pt-10 pb-2 mx-auto w-full text-center bg-zinc-100 max-w-[480px]`}>
+    <View style={tw`flex-1 overflow-hidden flex-col px-2 pt-2 pb-2 mx-auto w-full text-center bg-zinc-100 max-w-[480px]`}>
     <UserHeader 
       avatarUrl={images.avatarverified}
       username='Manager'
