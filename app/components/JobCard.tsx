@@ -52,7 +52,7 @@ const JobCard: React.FC<JobCardProps> = ({
         <View style={tw`flex flex-col px-2.5 py-3 w-full overflow-hidden aspect-[1.778] h-[194px]`}>
           <Image
             source={{ uri: backgroundImage }}
-            style={tw`object-contain absolute self-center shrink-0 inset-0 size-full w-[320px] h-[194px]`}
+            style={tw`object-contain absolute self-center shrink-0 inset-0 size-full w-[330px] h-[194px]`}
           />
           <View style={tw`flex relative flex-col items-start max-w-full w-[184px]`}>
             {details.map((detail, index) => (

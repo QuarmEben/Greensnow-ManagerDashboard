@@ -24,7 +24,7 @@ const UserApproved = () => {
 
   return (
     
-      <View style={tw`px-4 py-6 bg-gray-100`}>
+      <View style={tw`flex px-4 py-2 bg-gray-100`}>
         {/* Header */}
         
           <Text style={tw`self-start text-2xl font-bold text-stone-900`}>Personal Info</Text>
@@ -93,18 +93,21 @@ const UserApproved = () => {
 
         
 
-        <Image 
-      source={images.logowithoutcaption} 
-      style={tw`absolute bottom-0 left-0`}
-     />
+       
 
       {/* Footer */}
       <View style={tw`mt-35 mb-5 flex items-center`}>
        <Image source={images.logowithcaption} />
       </View>
 
+      {/* Watermark logo */}
+      <Image 
+      source={images.logowithoutcaption} 
+      style={tw`absolute bottom-0 left-0`}
+     />
     
         </ScrollView>
+
       </View>
     
   );

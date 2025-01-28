@@ -19,7 +19,7 @@ const UserApproved = () => {
 
   return (
     
-      <View style={tw`px-4 py-6 bg-gray-100`}>
+      <View style={tw`px-1 py-2 bg-gray-100`}>
         {/* Header */}
         
           <Text style={tw`self-start text-2xl font-bold text-stone-900`}>Verify Account Identity</Text>

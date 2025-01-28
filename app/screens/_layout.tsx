@@ -9,7 +9,7 @@ import { HeaderScreens } from '../components/HeaderScreens';
 export default function ShiftsLayout() {
 
   return (
-    <View style={tw`flex-1 overflow-hidden flex-col px-3 pt-10 pb-6 mx-auto w-full text-center bg-zinc-100 max-w-[480px]`}>
+    <View style={tw`flex-1 overflow-hidden flex-col px-3 pt-0.5 pb-6 mx-auto w-full text-center bg-zinc-100 max-w-[480px]`}>
       <HeaderScreens />
         <Stack>
             <Stack.Screen name='UserApproved' options={{ headerShown: false }} />
